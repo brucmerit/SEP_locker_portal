@@ -97,7 +97,7 @@ Running the database
  
 ### Links
  
-GitHub Repository: [Insert your GitHub Repo URL here]
+GitHub Repository: https://github.com/brucmerit/SEP_locker_portal.git
  
  
 ### Acknowledgements
