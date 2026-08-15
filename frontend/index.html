@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Locker Reservation Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="js/api.js"></script>
+  <script defer src="js/index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900" style="font-family: 'Poppins', sans-serif;">
+
+  <!-- Hero -->
+  <section id="hero" class="relative h-[420px] flex items-center justify-center text-center overflow-hidden bg-slate-800">
+    <img id="heroImage" src="" alt="" class="absolute inset-0 w-full h-full object-cover opacity-90 hidden" />
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-slate-900/50"></div>
+
+    <div class="relative z-10 px-6">
+      <p class="uppercase tracking-[0.3em] text-sm text-blue-300 font-semibold mb-3">Find. Reserve. Go.</p>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 drop-shadow-lg">Locker Reservation Portal</h1>
+      <p class="text-lg text-slate-200 max-w-xl mx-auto">Check locker availability at any station near you and reserve one in seconds - no account needed.</p>
+    </div>
+
+  </section>
+
+  <!-- Station List -->
+  <section class="max-w-6xl mx-auto py-14 px-4">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-3xl font-bold text-slate-800">Locker Stations</h2>
+        <p class="text-slate-500 mt-1">Tap a station to see live locker availability.</p>
+      </div>
+      <p id="loadingMessage" class="text-slate-400 text-sm">Loading stations...</p>
+    </div>
+
+    <div id="stationContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Station cards get added here by index.js -->
+    </div>
+
+    <p id="emptyMessage" class="hidden text-slate-500 mt-4">No stations found.</p>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserve Locker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="js/api.js"></script>
+  <script defer src="js/reserve.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900" style="font-family: 'Poppins', sans-serif;">
+
+  <!-- Header -->
+  <section class="bg-gradient-to-br from-blue-700 to-slate-900 text-white py-12 px-6 text-center">
+    <h1 class="text-3xl font-bold mb-2">Reserve Locker <span id="lockerNumberLabel" class="text-blue-300"></span></h1>
+    <p id="stationNameLabel" class="text-blue-100"></p>
+  </section>
+
+  <!-- Reservation Form -->
+  <section class="max-w-md mx-auto py-10 px-4">
+    <form id="reserveForm" class="bg-white rounded-2xl shadow-lg p-8 flex flex-col gap-4">
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Mobile Number</label>
+        <input type="tel" id="mobileNumber" required maxlength="8" placeholder="e.g. 81234567"
+          class="w-full border border-slate-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">6-Digit PIN</label>
+        <input type="password" id="pin" required maxlength="6" placeholder="e.g. 135790"
+          class="w-full border border-slate-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <p class="text-xs text-slate-500 mt-1">You'll need this PIN to manage or cancel your reservation later, so remember it.</p>
+      </div>
+
+      <p id="errorMessage" class="hidden text-red-600 text-sm"></p>
+
+      <button type="submit" id="submitBtn"
+        class="bg-blue-600 text-white hover:bg-blue-700 font-semibold py-3 px-4 rounded-lg transition">
+        Reserve This Locker
+      </button>
+    </form>
+  </section>
+
+</body>
+</html>

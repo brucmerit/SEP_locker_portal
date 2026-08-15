@@ -1,0 +1,18 @@
+/* Small custom touches that go beyond plain Tailwind utility classes */
+
+.station-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.station-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.25);
+}
+
+.locker-tile {
+  transition: transform 0.15s ease;
+}
+
+.locker-tile:hover {
+  transform: scale(1.05);
+}
